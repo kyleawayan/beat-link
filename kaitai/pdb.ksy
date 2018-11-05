@@ -205,6 +205,8 @@ types:
         doc: |
           @flesniak said: "always 0 except 1 for history pages, num
           entries for strange pages?"
+      - id: heap
+        size-eos: true
     instances:
       num_rows:
         value: |
@@ -291,7 +293,8 @@ types:
           deleted.
         -webide-parse-mode: eager
       body:
-        pos: ofs_row + 0x28
+        io: _parent._parent.heap._io
+        pos: ofs_row
         type:
           switch-on: _parent._parent.type
           cases:
