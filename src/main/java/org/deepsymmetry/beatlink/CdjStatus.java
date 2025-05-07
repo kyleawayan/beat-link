@@ -684,7 +684,7 @@ public class CdjStatus extends DeviceUpdate {
 
         final byte trackSourceByte = packetBytes[0x28];
         if (isFromOpusQuad && (trackSourceByte < 16)) {
-            int sourcePlayer = Util.translateOpusPlayerNumbers(trackSourceByte);
+            int sourcePlayer = 1;
             trackSourcePlayer = sourcePlayer;
             trackSourceSlot = TrackSourceSlot.USB_SLOT;
             // Indicate whether we have a metadata archive available for the USB slot:
