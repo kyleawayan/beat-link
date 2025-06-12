@@ -28,8 +28,7 @@ Legend:
 - 🟢 = Full support
 - 🟣 = Planned for full support
 - 🔴 = No support
-- "Key" = database passphrase is set
-- "lRekordbox" = rekordbox lighting keep alive packet is being sent
+- "VirtualRekordbox" = rekordbox lighting keep alive packet is being sent
 - "VirtualCDJ" = VirtualCDJ(?)--the one dysentery sends--keep alive packet is being sent
 
 The table below is sorted by the best to the worst method in terms of beat-link and Beat Link Trigger support. **Note that methods 3 and 4 are there for reference, as they are pretty much useless without PSSI matching or database passphrase, since we can't match metadata reliably without it.** (In a nutshell, we can't match the rekordbox IDs sent back from the OPUS-QUAD with the DeviceSQL database, since we found out that the IDs being sent back are Device Library Plus IDs, and the Device Library Plus database is encrypted. See https://github.com/Deep-Symmetry/beat-link/pull/86 for more details on how METHOD 2 was implemented.)
